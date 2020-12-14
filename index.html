@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mysite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mysite.css">
+</head>
+
+<body>
+    <div class="mainbox"> >
+        <div class="nameanimation">Peter Kharitonov</div>
+        <div class="beginnerwebdesigner">BEGINNER<br>WEB<br>DESIGNER</div>
+        <div class="animbnd"> B&D</div>
+        <div class="animinst">INSTITUTE</div>
+        <div class="animstud">STUDENT</div>
+    </div>
+    <div class="leftbox">
+        <div class="projects">PROJECTS</div>
+    </div>
+    <div class="rightbox">
+        <div class="rightboxwords">
+            <li style="font-size: 20px;">contacts &nbsp :</li>
+            <li><a href="https://vk.com/id169650425" target="_blank" style="font-size: 20px; margin-left: 40px;"> vk</a>
+            </li>
+            <li><a href="https://www.instagram.com/kharitonov_ptr/" target="_blank"
+                    style="font-size: 20px; margin-left: 40px;"> instagram</a></li>
+        </div>
+        <div class="aboutst"><a href="aboutsite.html" id="about" style="text-decoration: none;"> about</a></div>
+    </div>
+    <div class='projectsbox'>
+        <div style="background-color: white; position: absolute; margin: 0; z-index: 2;">
+            <div class="steezyword">#1 Steezy magazine</div>
+            <div class="camword">#2 Сamera illustrations</div>
+        </div>
+        <div>
+            <div class="sl_ctr">
+                <div class="sldr">
+                    <img src="images/steezy1.png" alt="">
+                    <img src="images/steezy2.png" alt="">
+                    <img src="images/steezy3.png" alt="">
+                    <img src="images/steezy4.png" alt="">
+                </div>
+                <div class="prv_b"></div>
+                <div class="nxt_b"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var sldr = $('.sldr'),
+                    sldrContent = sldr.html(),
+                    slideWidth = $('.sl_ctr').outerWidth(),
+                    slideCount = $('.sldr img').length,
+                    prv_b = $('.prv_b'),
+                    nxt_b = $('.nxt_b'),
+                    sldrInterval = 3300,
+                    animateTime = 1000,
+                    course = 1,
+                    margin = - slideWidth;
+                $('.sldr img:last').clone().prependTo('.sldr'); $('.sldr img').eq(1).clone().appendTo('.sldr'); $('.sldr').css('margin-left', -slideWidth); function nxt_bSlide() { interval = window.setInterval(animate, sldrInterval) } function animate() { if (margin == -slideCount * slideWidth - slideWidth) { sldr.css({ 'marginLeft': -slideWidth }); margin = -slideWidth * 2 } else if (margin == 0 && course == -1) { sldr.css({ 'marginLeft': -slideWidth * slideCount }); margin = -slideWidth * slideCount + slideWidth } else { margin = margin - slideWidth * (course) } sldr.animate({ 'marginLeft': margin }, animateTime) } function sldrStop() { window.clearInterval(interval) } prv_b.click(function () { if (sldr.is(':animated')) { return false } var course2 = course; course = -1; animate(); course = course2 }); nxt_b.click(function () { if (sldr.is(':animated')) { return false } var course2 = course; course = 1; animate(); course = course2 }); sldr.add(nxt_b).add(prv_b).hover(function () { sldrStop() }, nxt_bSlide); nxt_bSlide()
+            });
+        </script>
+        <div>
+            <div class="sl_ctr2">
+                <div class="sldr2">
+                    <img src="images/cam1.png" alt="">
+                    <img src="images/cam2.png" alt="">
+                    <img src="images/cam3.png" alt="">
+                </div>
+                <div class="prv_b2"></div>
+                <div class="nxt_b2"></div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var sldr = $('.sldr2'),
+                    sldrContent = sldr.html(),
+                    slideWidth = $('.sl_ctr2').outerWidth(),
+                    slideCount = $('.sldr2 img').length,
+                    prv_b = $('.prv_b2'),
+                    nxt_b = $('.nxt_b2'),
+                    sldrInterval = 3300,
+                    animateTime = 1000,
+                    course = 1,
+                    margin = - slideWidth;
+                $('.sldr2 img:last').clone().prependTo('.sldr2'); $('.sldr2 img').eq(1).clone().appendTo('.sldr2'); $('.sld2r').css('margin-left', -slideWidth); function nxt_bSlide() { interval = window.setInterval(animate, sldrInterval) } function animate() { if (margin == -slideCount * slideWidth - slideWidth) { sldr.css({ 'marginLeft': -slideWidth }); margin = -slideWidth * 2 } else if (margin == 0 && course == -1) { sldr.css({ 'marginLeft': -slideWidth * slideCount }); margin = -slideWidth * slideCount + slideWidth } else { margin = margin - slideWidth * (course) } sldr.animate({ 'marginLeft': margin }, animateTime) } function sldrStop() { window.clearInterval(interval) } prv_b.click(function () { if (sldr.is(':animated')) { return false } var course2 = course; course = -1; animate(); course = course2 }); nxt_b.click(function () { if (sldr.is(':animated')) { return false } var course2 = course; course = 1; animate(); course = course2 }); sldr.add(nxt_b).add(prv_b).hover(function () { sldrStop() }, nxt_b2Slide); nxt_b2Slide()
+            });
+        </script>
+
+
+</body>
+
+</html>

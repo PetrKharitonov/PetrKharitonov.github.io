@@ -1,0 +1,253 @@
+.mainbox {
+    background: hsl(0, 46%, 46%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    font-family: 'Questrial', sans-serif;
+}
+.leftbox {
+    background: white;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    border-top-right-radius: 40px;
+    position: fixed;
+}
+.rightbox {
+    background: #704747;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    font-family: 'Questrial', sans-serif;
+}
+.rightboxwords {
+    margin-top: 110px; 
+    margin-left: 120px; 
+    color: white;
+}
+.projectsbox {
+    background-color: white;
+    width: 450px;
+    height: 1000px;  
+    margin-top: 965px;  
+    margin-left: 200px;
+    position: absolute;
+}
+.steezyword {
+    font-family: 'Questrial', sans-serif; 
+    font-size: 72px; 
+    margin-top: 200px
+}
+.camword {
+    font-family: 'Questrial', sans-serif; 
+    font-size: 72px; 
+    margin-top: 670px;
+}
+.aboutst {
+    font-size: 64px;
+    color: white;
+    margin-left: 120px;
+    margin-top: 700px;
+}
+.beginnerwebdesigner {
+    font-size: 36px; 
+    color: white; 
+    margin-left: 200px; 
+    margin-top: 120px;
+}
+li {
+    display: inline-block;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    transition: all .1s ease-out;
+}
+li a:hover {
+    border-bottom: 2px solid white;
+}
+.nameanimation {
+    position: relative;
+    animation: down;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    font-size: 96px; 
+    color: #272727; 
+    margin-left: 200px; 
+}
+.animbnd {
+    position: relative;
+    animation: bnd;
+    animation-duration: 3s;
+    font-size: 36px; 
+    margin-left: 200px; 
+    margin-top: 90px; 
+    text-decoration: none; 
+    color: #272727;
+}
+.animinst {
+    position: relative;
+    animation: institute;
+    animation-duration: 3s;
+    font-size: 36px; 
+    color: #272727; 
+    margin-left: 200px; 
+    margin-top: 10px;
+}
+.animstud {
+    position: relative;
+    animation: student;
+    animation-duration: 4s;
+    font-size: 36px; 
+    color: #272727; 
+    margin-left: 200px; 
+    margin-top: 10px;
+}
+.projects {
+    margin-top: 26px; 
+    text-align: center; 
+    font-size: 26px; 
+    font-family: 'Questrial', sans-serif; 
+    color: hsl(0, 0%, 15%);
+}
+#about {
+    animation: about;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}    
+.wrapper {
+    height: 619px; 
+    width: 450px; 
+    margin-left: 500px;  
+    display: flex;
+    overflow-x: auto;
+    margin-top: 200px;
+}
+/* .wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.steezypng  {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 600px;
+    width: 450px;
+}
+.slider {
+    animation: 20s slider infinite;
+    animation-direction: alternate;
+}
+.sliderimg {
+    float: left; */
+
+
+
+    .sl_ctr{
+    position:relative;
+    width:450px;
+    height:619px;
+    overflow:hidden;
+    margin-left: 500px;
+    margin-top: 200px;
+    }
+    .sldr{
+    position:relative;
+    width:10000px;
+    height:300px;
+    }
+    .sldr img{
+    float:left;
+    }
+    .prv_b, .nxt_b{
+    position:absolute;
+    top: 300px;
+    display:block;
+    width:35px;
+    height:35px;
+    cursor:pointer;
+    }
+    .prv_b:hover, .nxt_b:hover{opacity:.6;}
+    .prv_b{
+    left:10px;
+    background:url(images/prv.png) no-repeat;
+    }
+    .nxt_b{
+    right:10px;
+    background:url(images/nxt.png) no-repeat;
+    }
+    .prv_b2, .nxt_b2{
+        position:absolute;
+        top: 300px;
+        display:block;
+        width:35px;
+        height:35px;
+        cursor:pointer;
+        }
+        .prv_b2:hover, .nxt_b2:hover{opacity:.6;}
+        .prv_b2{
+        left:10px;
+        background:url(images/prv2.png) no-repeat;
+        }
+        .nxt_b2{
+        right:10px;
+        background:url(images/nxt2.png) no-repeat;
+        }
+    .sl_ctr2{
+    position:relative;
+    width:450px;
+    height:619px;
+    overflow:hidden;
+    margin-left: 500px;
+    margin-top: 200px;
+    }
+    .sldr2{
+    position:relative;
+    width:10000px;
+    height:300px;
+    }
+    .sldr2 img{
+    float:left;
+    }
+    
+@keyframes slider {
+    0%      {left: -500px;}
+    20%     {left: -500px;}
+    25%     {left: -950px;}
+    45%     {left: -950px;}
+    50%     {left: -1400px;}
+    70%     {left: -1400px;}
+    75%     {left: -1850px;}
+    100%     {left: -1850px;}
+}
+
+@keyframes down {
+    0%      {top: -136px}
+    100%    {top: 100px}
+}
+@keyframes bnd {
+    0%      {color: hsl(0, 46%, 46%);}
+    100%    {color:#272727;}
+}
+@keyframes institute {
+    0%      {color: hsl(0, 46%, 46%);}
+    40%      {color: hsl(0, 46%, 46%);}
+    100%    {color:#272727;}
+}
+@keyframes student {
+    0%      {color: hsl(0, 46%, 46%);}
+    50%      {color: hsl(0, 46%, 46%);}
+    100%    {color: #272727;}
+}
+@keyframes about {
+    0%      {color: white;}
+    25%    {color: hsl(0, 0%, 15%)}
+    75%    {color: white}
+    100%    {color: white}
+}
+
+
+

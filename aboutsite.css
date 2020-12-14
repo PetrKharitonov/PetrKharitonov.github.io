@@ -1,0 +1,30 @@
+#leftb {
+    background:   hsl(0, 46%, 46%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+}
+#rightb {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 1450px;
+    top: 0;
+    left: 400px;
+}
+
+#home {
+    animation: home;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes home {
+    0%      {color:  hsl(0, 0%, 15%);}
+    25%    {color: white}
+    75%    {color:  hsl(0, 0%, 15%)}
+    100%   {color:  hsl(0, 0%, 15%)}
+ 
+}
